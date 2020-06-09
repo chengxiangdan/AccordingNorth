@@ -9,6 +9,8 @@ import java.util.List;
 public interface UserMapper {
     //添加数据
     long insertUser(UserInfo user);
+
+    UserInfo findUserInfo(UserInfo user);
     //查询数据
 //   / List<UserInfo> getUser(UserInfo user);
 }

@@ -16,4 +16,10 @@ public class UserServiceImpl implements UserService {
         long flag=userMapper.insertUser(user);
         return flag;
     }
+
+    @Override
+    public UserInfo findUserInfo(UserInfo user) {
+        UserInfo userInfo=userMapper.findUserInfo(user);
+        return userInfo;
+    }
 }

@@ -76,4 +76,11 @@
       </if>
     </trim>
   </insert>
+
+  <select id="findUserInfo" parameterType="com.website.entity.UserInfo" resultMap="BaseResultMap">
+    select  id,user_name, password,name,phone,age,sex,birthdayTime,userLevel,hobby
+        from user where 1=1 and user_name=#{userName,jdbcType=VARCHAR} and password=#{passWord,jdbcType=VARCHAR}
+  </select>
+
+
 </mapper>
