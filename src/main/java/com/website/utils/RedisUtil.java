@@ -37,13 +37,16 @@ public class RedisUtil {
     }
 
     public static void main(String[] args) {
-      /*  Jedis jedis = new Jedis("120.27.62.139",6379);
+        /*Jedis jedis = new Jedis("120.27.62.139",6379);
         System.out.println("连接成功");*/
 
         //存储数据到列表中
        String name="name";
+       String value="程";
+      /* jedis.set(name,value);
+        String s = jedis.get(name);
+        System.out.println(s);*/
 
-        String value="程";
         RedisUtil.set(name.getBytes(),value.getBytes());
         byte[] bytes = RedisUtil.get(name.getBytes());
         String val=new String(bytes);
